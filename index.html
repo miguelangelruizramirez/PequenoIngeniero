@@ -1,141 +1,128 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pequeños Ingenieros - Proyecto 001 Brazo Hidráulico</title>
-<meta name="description" content="Proyecto educativo familiar: Brazo Hidráulico de Cartón. Aprende STEM con tu hijo.">
+<title>Pequeños Ingenieros</title>
+<meta name="description" content="Pequeños Ingenieros: proyectos educativos padre-hijo. Aprende, crea y comparte con tu hijo.">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-* {margin:0; padding:0; box-sizing:border-box; font-family:'Roboto',sans-serif;}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto',sans-serif;}
 body {background:#f0f8ff; color:#333; line-height:1.6;}
 a {text-decoration:none; color:inherit;}
 
-/* Header */
-header {background:#00897b; color:white; padding:25px 10px; text-align:center; border-bottom:5px solid #004d40;}
-header h1 {font-size:2.2em; margin-bottom:10px;}
-header p {font-size:1em; color:#e0f2f1;}
+header {background:#00897b; color:white; padding:25px 10px; text-align:center;}
+header h1 {font-size:2.4em; margin-bottom:10px; font-weight:700;}
+nav ul {list-style:none; display:flex; justify-content:center; gap:20px; flex-wrap:wrap;}
+nav ul li a {color:white; font-weight:500; padding:8px 15px; border-radius:5px; transition:0.3s;}
+nav ul li a:hover {background:#004d40;}
 
-/* Secciones */
-section {padding:40px 20px; max-width:1200px; margin:auto;}
-section h2 {text-align:center; font-size:2em; color:#00796b; margin-bottom:25px;}
+.hero {padding:60px 20px; text-align:center; background:linear-gradient(135deg,#26a69a,#80cbc4); color:white; border-radius:10px; margin:20px;}
+.hero h2 {font-size:2em; margin-bottom:15px;}
+.hero p {font-size:1.2em; margin-bottom:25px;}
+.hero a.button {background:#004d40; color:white; padding:14px 30px; border-radius:8px; font-weight:600; transition:0.3s;}
+.hero a.button:hover {background:#00251a;}
 
-/* Cards */
-.cards-container {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-bottom:30px;}
-.card {background:white; border-radius:15px; padding:20px; box-shadow:0 4px 15px rgba(0,0,0,0.1);}
-.card img {width:100%; height:180px; object-fit:cover; border-radius:10px; margin-bottom:15px;}
-.card h3 {margin-bottom:10px; color:#004d40; font-weight:600;}
-.card p, .card ul, .card li {color:#555; font-size:0.95em; margin-bottom:8px;}
+section {padding:50px 20px; max-width:1200px; margin:auto;}
+section h2 {text-align:center; font-size:2em; color:#00796b; margin-bottom:30px;}
+
+.cards-container {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;}
+.card {background:white; border-radius:15px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s, box-shadow 0.3s; padding:25px; text-align:center;}
+.card:hover {transform:translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.15);}
+.card h3 {margin-bottom:12px; color:#004d40; font-weight:600;}
+.card p, .card ul, .card li {color:#555; font-size:1em; margin-bottom:10px;}
 .card ul {padding-left:20px;}
+.card img {width:100%; height:180px; object-fit:cover; border-radius:10px; margin-bottom:15px;}
 
-/* Tablas */
-table {width:100%; border-collapse:collapse; margin-bottom:20px;}
-th, td {border:1px solid #ccc; padding:10px; text-align:left;}
-th {background:#e0f2f1; color:#004d40;}
-
-/* CTA */
-.cta {text-align:center; padding:40px 20px; background:#e0f2f1; border-radius:15px; margin:30px auto;}
-.cta a.button {background:#00796b; color:white; padding:14px 30px; font-weight:600; border-radius:8px; transition:0.3s;}
+.cta {text-align:center; padding:50px 20px; background:#e0f2f1; border-radius:15px; margin:40px auto;}
+.cta a.button {background:#00796b; color:white; padding:16px 35px; font-weight:600; border-radius:8px; transition:0.3s;}
 .cta a.button:hover {background:#004d40;}
 
-/* Footer */
 footer {text-align:center; padding:25px 10px; background:#004d40; color:white; border-top-left-radius:10px; border-top-right-radius:10px;}
 footer a {color:#26a69a; font-weight:500;}
 
-/* Responsive */
 @media(max-width:600px){
-header h1 {font-size:1.6em;}
-section h2 {font-size:1.5em;}
-.card p, .card li {font-size:0.9em;}
+header h1 {font-size:1.8em;}
+.hero h2 {font-size:1.5em;}
+.hero p {font-size:1.05em;}
 }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Pequeños Ingenieros - Proyecto 001</h1>
-  <p>Brazo Hidráulico de Cartón | Diseñado por Ing. Miguel Ángel Ruiz Ramírez</p>
+  <h1>Pequeños Ingenieros</h1>
+  <nav>
+    <ul>
+      <li><a href="#objetivos">Objetivos</a></li>
+      <li><a href="#alcance">Alcance</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#cta">Únete</a></li>
+    </ul>
+  </nav>
 </header>
 
-<section id="introduccion">
-  <h2>Introducción Educativa</h2>
-  <div class="card">
-    <p>En este proyecto, Miguel Ángel aprenderá junto a su papá cómo la <strong>presión hidráulica</strong> puede mover objetos usando agua y jeringas. Explorarán juntos principios de <strong>física, trabajo en equipo y creatividad</strong>, mientras construyen un brazo robótico de cartón que realmente se mueve.</p>
-  </div>
+<section class="hero">
+  <h2>Aprende, Crea y Comparte con tu Hijo</h2>
+  <p>Actividades educativas, prácticas y seguras que fomentan creatividad, aprendizaje y diversión.</p>
+  <a href="#cta" class="button">Únete a la Comunidad</a>
 </section>
 
-<section id="plan-trabajo">
-  <h2>Plan de Trabajo</h2>
+<section id="objetivos">
+  <h2>Objetivos</h2>
   <div class="cards-container">
     <div class="card">
-      <h3>Día 1 – Preparación y Corte de Piezas</h3>
-      <p><strong>Papá:</strong> Imprimir piezas, recortar cartón 2 mm, marcar puntos de unión.</p>
-      <p><strong>Hijo:</strong> Identificar piezas y decorar con colores.</p>
-      <p><strong>Materiales:</strong> Cartón, tijeras, cúter (solo papá), pegamento, lápiz, colores.</p>
+      <h3>Objetivo Principal</h3>
+      <p>Pasar tiempo de calidad con los hijos mientras se enseñan conceptos prácticos de ciencia, ingeniería y creatividad.</p>
     </div>
     <div class="card">
-      <h3>Día 2 – Ensamble del Brazo</h3>
-      <p><strong>Papá:</strong> Perforar puntos de pivote, insertar ejes, fijar jeringas.</p>
-      <p><strong>Hijo:</strong> Sostener piezas, ayudar a llenar las jeringas con agua.</p>
-      <p><strong>Materiales:</strong> 3 jeringas, 3 mangueras, palillos, cinta, agua.</p>
-    </div>
-    <div class="card">
-      <h3>Día 3 – Prueba y Juego</h3>
-      <p><strong>Papá:</strong> Comprobar movimiento y ajustar uniones.</p>
-      <p><strong>Hijo:</strong> Mover el brazo, levantar objetos, tomar fotos para su cuaderno.</p>
+      <h3>Objetivos Secundarios</h3>
+      <ul>
+        <li>Documentar proyectos paso a paso con PDFs, imágenes y videos.</li>
+        <li>Crear una comunidad donde otros padres puedan replicar proyectos y aportar ideas.</li>
+        <li>Generar un portafolio profesional y educativo.</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section id="materiales">
-  <h2>Lista de Materiales</h2>
-  <table>
-    <tr><th>Material</th><th>Cantidad</th><th>Medidas / Especificaciones</th></tr>
-    <tr><td>Cartón reciclado</td><td>1 lámina</td><td>30 × 40 cm, 2 mm grosor</td></tr>
-    <tr><td>Jeringas plásticas</td><td>3</td><td>10 ml, sin aguja</td></tr>
-    <tr><td>Manguera transparente</td><td>3</td><td>20 cm</td></tr>
-    <tr><td>Palillos o broches</td><td>4</td><td>5 cm</td></tr>
-    <tr><td>Pegamento blanco</td><td>1 tubo</td><td>Secado rápido</td></tr>
-    <tr><td>Cinta adhesiva</td><td>1 rollo</td><td>Para reforzar uniones</td></tr>
-    <tr><td>Agua con colorante</td><td>—</td><td>Opcional para visualización</td></tr>
-  </table>
-</section>
-
-<section id="diagramas">
-  <h2>Diagramas Técnicos</h2>
+<section id="alcance">
+  <h2>Alcance</h2>
   <div class="cards-container">
     <div class="card">
-      <h3>Vista 2D - Plano de Corte</h3>
-      <img src="imagenes/plano_2D.png" alt="Plano 2D del brazo hidráulico">
-      <p>Piezas numeradas: Base, Brazo inferior, Brazo superior, Pinza doble, Soporte de jeringas. Escala 1:1.</p>
-    </div>
-    <div class="card">
-      <h3>Vista 3D - Montaje Digital</h3>
-      <img src="imagenes/modelo_3D.png" alt="Modelo 3D del brazo hidráulico">
-      <p>Colores diferenciados: gris = cartón, azul = mangueras, naranja = puntos de unión. Conexión de jeringas y mangueras.</p>
-    </div>
-    <div class="card">
-      <h3>QR del Repositorio</h3>
-      <img src="imagenes/qr_repo.png" alt="QR del repositorio">
-      <p>Escanea para acceder al repositorio y ver más proyectos.</p>
+      <ul>
+        <li>Proyectos para niños de preescolar y primaria, adaptables a distintas edades.</li>
+        <li>Materiales accesibles y seguros.</li>
+        <li>Comunidad online con participación, comentarios, retos y galerías.</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section id="proximos-proyectos">
-  <h2>Próximos Proyectos</h2>
-  <ul>
-    <li>Proyecto 002: Puente Elevadizo Hidráulico</li>
-    <li>Proyecto 003: Grúa Solar de Cartón</li>
-    <li>Proyecto 004: Molino de Agua Generador</li>
-    <li>Proyecto 005: Mini Brazo Robótico con Servos</li>
-  </ul>
+<section id="proyectos">
+  <h2>Proyectos Destacados</h2>
+  <div class="cards-container">
+    <div class="card">
+      <img src="images/proyecto1.jpg" alt="Brazo Hidráulico">
+      <h3>Brazo Hidráulico</h3>
+      <p>Aprende hidráulica con un brazo funcional seguro y divertido para niños.</p>
+    </div>
+    <div class="card">
+      <img src="images/proyecto2.jpg" alt="Catapulta de Palitos">
+      <h3>Catapulta de Palitos</h3>
+      <p>Física divertida construyendo catapultas y lanzando pequeños proyectiles.</p>
+    </div>
+    <div class="card">
+      <img src="images/proyecto3.jpg" alt="Vehículo de Cartón">
+      <h3>Vehículo de Cartón</h3>
+      <p>Explora ingeniería simple creando un vehículo que se mueva con ruedas y palillos.</p>
+    </div>
+  </div>
 </section>
 
 <section id="cta" class="cta">
-  <h2>¡Participa y Comparte!</h2>
-  <p>Documenta tus proyectos, comparte experiencias y fomenta el aprendizaje STEM en familia.</p>
+  <h2>¡Únete a la Comunidad!</h2>
+  <p>Comparte tus proyectos, aprende con otros padres y fomenta el aprendizaje divertido en casa.</p>
   <a href="register.html" class="button">Registrarse Ahora</a>
 </section>
 
